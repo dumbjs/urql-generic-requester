@@ -1,6 +1,6 @@
 # urql-generic-requester
 
-> GraphQL Codegen Generic SDK Requeter creator for URQL Client
+> GraphQL Codegen Generic SDK Requester creator for URQL Client
 
 [![Stargazers](https://img.shields.io/github/stars/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/stargazers)
 [![Issues](https://img.shields.io/github/issues/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/issues)
