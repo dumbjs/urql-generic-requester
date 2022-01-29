@@ -1,7 +1,7 @@
 import { DocumentNode } from "graphql";
 import { Client } from "urql";
 
-export const createUrqlRequestor = (client: Client) => {
+export const createUrqlRequester = (client: Client) => {
   return <Context, Result, Variables extends {}>(
     document: DocumentNode,
     params?: Variables,
