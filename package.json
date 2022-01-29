@@ -1,6 +1,6 @@
 {
   "name": "urql-generic-requester",
-  "version": "0.0.0-local",
+  "version": "0.0.1",
   "description": "GraphQL Codegen Generic SDK Requeter creator for URQL Client",
   "license": "MIT",
   "author": "Reaper <ahoy@barelyhuman.dev>",
