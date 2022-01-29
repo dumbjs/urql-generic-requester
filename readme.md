@@ -4,7 +4,7 @@
 
 [![Stargazers](https://img.shields.io/github/stars/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/stargazers)
 [![Issues](https://img.shields.io/github/issues/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/issues)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge&color=98C379&labelColor=18181b)](https://standardjs.com)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=for-the-badge&color=98C379&labelColor=18181b)](https://standardjs.com)
 
 ## About
 
@@ -33,19 +33,19 @@ yarn add urql-generic-requester graphql urql
 The library is typesafe and will infer types from urql's response structure for you to use as is.
 
 ```js
-import { createUrqlRequester } from "urql-generic-requester";
-import { createClient } from "urql";
+import {createUrqlRequester} from 'urql-generic-requester'
+import {createClient} from 'urql'
 
 // get the sdk from the generated file from graphql-codegen
-import { getSdk } from "./sdk.ts";
+import {getSdk} from './sdk.ts'
 
 const client = createClient({
-  // ... urql client config and exchanges
-});
+	// ... urql client config and exchanges
+})
 
-const requestHandler = createUrqlRequester(client);
+const requestHandler = createUrqlRequester(client)
 
-const sdk = getSdk(requestHandler);
+const sdk = getSdk(requestHandler)
 ```
 
 ## License
