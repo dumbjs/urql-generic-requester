@@ -1,0 +1,10 @@
+{
+  "extends": "@mvllow/tsconfig",
+  "include": ["*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "."
+  }
+}
