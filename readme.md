@@ -40,7 +40,7 @@ import {createClient} from 'urql'
 import {getSdk} from './sdk.ts'
 
 const client = createClient({
-	// ... urql client config and exchanges
+  // ... urql client config and exchanges
 })
 
 const requestHandler = createUrqlRequester(client)
