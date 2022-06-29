@@ -3,4 +3,4 @@ pre-commit:
   commands:
     fix:
       glob: '*.{js,ts}'
-      run: prettier --write {staged_files}; git add {staged_files}
+      run: eslint --fix {staged_files}; git add {staged_files}

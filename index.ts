@@ -1,5 +1,5 @@
-import {DocumentNode} from 'graphql'
-import {Client} from 'urql'
+import { DocumentNode } from 'graphql'
+import { Client } from 'urql'
 
 export const createUrqlRequester =
   (client: Client) =>
@@ -12,21 +12,16 @@ export const createUrqlRequester =
 
     if (document.kind === 'Document') {
       for (const def of document.definitions) {
-        if (
-          def.kind === 'OperationDefinition' &&
-          def.operation === 'mutation'
-        ) {
+        if (def.kind === 'OperationDefinition' && def.operation === 'mutation')
           op = client.mutation
-        }
       }
     }
 
     return op(document, parameters, context)
       .toPromise()
-      .then((data) => {
-        if (data.error) {
-          return Promise.reject(data.error)
-        }
+      .then(data => {
+        if (data.error) return Promise.reject(data.error)
+
         return data.data as Result
       })
   }

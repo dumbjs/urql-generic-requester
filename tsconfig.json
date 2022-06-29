@@ -1,10 +1,14 @@
 {
-  "extends": "@mvllow/tsconfig",
-  "include": ["*"],
-  "exclude": ["dist"],
   "compilerOptions": {
-    "outDir": "dist",
+    "removeComments": true,
+    "target": "esnext",
     "declaration": true,
-    "declarationDir": "."
-  }
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["esnext"]
+  },
+  "include": ["*"],
+  "exclude": ["./**/dist", "node_modules", "tests"]
 }
