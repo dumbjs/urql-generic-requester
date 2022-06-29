@@ -4,7 +4,7 @@
 
 [![Stargazers](https://img.shields.io/github/stars/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/stargazers)
 [![Issues](https://img.shields.io/github/issues/barelyhuman/urql-generic-requester?style=for-the-badge&color=98C379&labelColor=18181b)](https://github.com/barelyhuman/urql-generic-requester/issues)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=for-the-badge&color=98C379&labelColor=18181b)](https://standardjs.com)
+
 
 ## About
 
@@ -20,7 +20,7 @@ generates:
 
 ## Install
 
-The package depends on `graphql` and `urql`, so do install them. If you have then already installed you don't have to add them again
+The package depends on `graphql` and `urql`, so do install them. Ignore if you've already got them installed.
 
 ```sh
 npm i urql-generic-requester graphql urql
