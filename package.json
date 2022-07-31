@@ -1,7 +1,7 @@
 {
   "name": "urql-generic-requester",
   "version": "0.0.1",
-  "description": "GraphQL Codegen Generic SDK Requester creator for URQL Client",
+  "description": "GraphQL Codegen Generic SDK Requester for URQL",
   "keywords": [
     "graphql",
     "graphql-codegen",
@@ -29,14 +29,16 @@
   },
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts --target=node12.22",
-    "dev": "pnpm build -- --watch"
+    "dev": "pnpm build -- --watch",
+    "next": "bumpp"
   },
   "prettier": "@barelyhuman/prettier-config",
   "devDependencies": {
-    "@barelyhuman/prettier-config": "^1.0.0",
+    "@barelyhuman/prettier-config": "^1.1.0",
     "@evilmartians/lefthook": "^1.0.4",
     "@mvllow/tsconfig": "^0.1.0",
     "@typescript-eslint/parser": "^5.30.0",
+    "bumpp": "^8.2.1",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "graphql": "^16.3.0",
