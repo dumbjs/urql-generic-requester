@@ -14,11 +14,11 @@ type Scalars = {
   String: string
 }
 
-type Requester<C = {}> = <R, V>(
+export type Requester<C = {}, E = unknown> = <R, V>(
   doc: DocumentNode,
   vars?: V,
   options?: C
-) => Promise<R>
+) => Promise<R> | AsyncIterable<R>
 
 // Document types
 type User = {
@@ -50,7 +50,7 @@ const GetUserDocument = gql`
 `
 
 // SDK
-function getSdk<C>(requester: Requester<C>) {
+export function getSdk<C, E>(requester: Requester<C, E>) {
   return {
     getUser(
       variables?: GetUserQueryVariables,
@@ -60,7 +60,7 @@ function getSdk<C>(requester: Requester<C>) {
         GetUserDocument,
         variables,
         options
-      )
+      ) as Promise<GetUserQuery>
     },
   }
 }
@@ -74,7 +74,7 @@ const client = createClient({
 })
 
 const requestHandler = createUrqlRequester(client)
-const sdk = getSdk(requestHandler as Requester)
+const sdk = getSdk(requestHandler)
 
 test('should run query', async () => {
   console.log('running')

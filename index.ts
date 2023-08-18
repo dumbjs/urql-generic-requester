@@ -1,9 +1,8 @@
 import { DocumentNode } from 'graphql'
 import { Client } from 'urql'
 
-export const createUrqlRequester =
-  (client: Client) =>
-  async <Context, Result, Variables extends Record<string, unknown>>(
+export const createUrqlRequester = <Context, E = unknown>(client: Client) => {
+  return async <Result, Variables>(
     document: DocumentNode,
     parameters?: Variables,
     context?: Context
@@ -17,7 +16,7 @@ export const createUrqlRequester =
       }
     }
 
-    return op(document, parameters, context)
+    return op(document, parameters as Record<string, unknown>, context)
       .toPromise()
       .then(data => {
         if (data.error) return Promise.reject(data.error)
@@ -25,3 +24,4 @@ export const createUrqlRequester =
         return data.data as Result
       })
   }
+}
