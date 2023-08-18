@@ -1,6 +1,6 @@
 {
   "name": "urql-generic-requester",
-  "version": "0.0.2",
+  "version": "0.1.0-beta.0",
   "description": "GraphQL Codegen Generic SDK Requester for URQL",
   "keywords": [
     "graphql",
@@ -31,7 +31,7 @@
     "build": "tsup index.ts --format cjs,esm --dts --target=node12.22",
     "dev": "pnpm build -- --watch",
     "next": "bumpp",
-    "gen:sdk":"node -r tsm scripts/generate-sdk.ts",
+    "gen:sdk": "node -r tsm scripts/generate-sdk.ts",
     "test": "uvu -r tsm tests"
   },
   "prettier": "@barelyhuman/prettier-config",
